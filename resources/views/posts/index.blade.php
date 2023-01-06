@@ -26,7 +26,12 @@
          <td>{{$post->body}}</td>
          <td>
              <a class="btn btn-outline-success" href="{{route('posts.edit',$post->id)}}" role="button">Edit</a>
-             <a class="btn btn-outline-danger" href="#" role="button">Delete</a>
+             <form method="post" action="{{route('posts.destroy',$post->id)}}">
+                 @method('DELETE')
+                 @csrf
+                 <button class="btn btn-outline-danger" type="submit">Delete</button>
+             </form>
+
          </td>
 
      </tr>
