@@ -28,7 +28,7 @@
             <td>{{$post->title}}</td>
             <td>{{$post->body}}</td>
             <td>
-                <a class="btn btn-outline-success" href="{{route('posts.edit',$post->id)}}" role="button">Edit</a>
+                <a class="btn btn-outline-success" href="{{route('post.restore',$post->id)}}" role="button">Restore</a>
                 <form method="post" action="{{route('posts.destroy',$post->id)}}">
                     @method('DELETE')
                     @csrf

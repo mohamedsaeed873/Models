@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::resource('posts',PostController::class);
+Route::get('posts/restor/{id}', [PostController::class,'restore'])->name('post.restore');
