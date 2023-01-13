@@ -29,7 +29,7 @@
              <form method="post" action="{{route('posts.destroy',$post->id)}}">
                  @method('DELETE')
                  @csrf
-                 <button class="btn btn-outline-danger" type="submit">Delete</button>
+                 <button class="btn btn-outline-danger" type="submit" action="{{route('posts.forceDelete',$post->id)}}" >ForceDelete</button>
              </form>
 
          </td>
